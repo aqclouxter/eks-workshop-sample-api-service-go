@@ -30,7 +30,7 @@ func main() {
 
 		// Normally this would be application/json, but we don't want to prompt downloads
 		w.Header().Set("Content-Type", "text/html")
-		outhtml := '<html><head><title>Clouxter EKS</title></head><body><h1>hola mundo</h1></body></html>'
+		outhtml := "<html><head><title>Clouxter EKS</title></head><body><h1>hola mundo</h1></body></html>"
 		io.WriteString(w, string(outhtml))
 
 		fmt.Println("Hello world - the log message")
