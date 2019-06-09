@@ -30,6 +30,7 @@ func main() {
 
 		// Normally this would be application/json, but we don't want to prompt downloads
 		w.Header().Set("Content-Type", "text/plain")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		io.WriteString(w, string(out))
 
 		fmt.Println("Hello world - the log message")
