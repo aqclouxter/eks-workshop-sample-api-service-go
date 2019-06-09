@@ -29,9 +29,8 @@ func main() {
 		out, _ := json.MarshalIndent(res, "", "  ")
 
 		// Normally this would be application/json, but we don't want to prompt downloads
-		w.Header().Set("Content-Type", "text/html")
-		outhtml = "<html><head><title>Clouxter EKS</title></head><body><h1>hola mundo</h1></body></html>"
-		io.WriteString(w, string(outhtml))
+		w.Header().Set("Content-Type", "text/plain")
+		io.WriteString(w, string(out))
 
 		fmt.Println("Hello world - the log message")
 	})
