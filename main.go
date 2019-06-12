@@ -14,7 +14,7 @@ func main() {
 
 		f := fib()
 
-		res := &response{Message: "welcome to clouxter"}
+		res := &response{Message: "welcome to clouxter authomatic deployment"}
 
 		for _, e := range os.Environ() {
 			pair := strings.Split(e, "=")
